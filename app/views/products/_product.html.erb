@@ -1,4 +1,9 @@
 <div id="<%= dom_id product %>">
+
+  <p>
+    <%= image_tag product.image, width: 150 %>
+  </p>
+  
   <p>
     <strong>Name:</strong>
     <%= product.name %>
@@ -23,5 +28,4 @@
     <strong>User:</strong>
     <%= product.user.email %>
   </p>
-
 </div>

@@ -1,10 +1,10 @@
-<h1>Editing product</h1>
+<h1 class="col-md-5 mb-2 container">Editing Product</h1>
 
-<%= render "form", product: @product %>
 
 <br>
 
-<div>
+<div class="col-md-5 mt-3 container">
+  <%= render "form", product: @product %>
   <%= link_to "Show this product", @product %> |
   <%= link_to "Back to products", products_path %>
 </div>

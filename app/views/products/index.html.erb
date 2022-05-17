@@ -1,14 +1,22 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Products</h1>
-
-<div id="products">
+<h1 class="text-center">Products</h1>
+<div class="row">
   <% @products.each do |product| %>
-    <%= render product %>
-    <p>
-      <%= link_to "Show this product", product %>
-    </p>
+    <div class="col-md-4">
+      <div class="card" style="width: 20rem;">
+        <%= image_tag product.image, class: "card-img-top" %>
+        <div class="card-body">
+          <h5 class="card-title"><%= product.name %></h5>
+          <p class="card-text"><%= product.description %></p>
+          <p class="card-text">$<%= product.price %></p>
+      <div class= "d-grid gap-2 d-md-flex justify-content-md" >
+          <%= button_to "Show this product", product, method: :get, class: "btn btn-primary" %>
+          <%= button_to "Buy", product, class: "btn btn-outline-success" %>
+        </div>
+      </div> 
+      </div>
+    </div>
   <% end %>
 </div>
 
-<%= link_to "New product", new_product_path %>
