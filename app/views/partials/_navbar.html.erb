@@ -1,4 +1,4 @@
-<nav class="navbar fixed-top navbar-light bg-light navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar fixed-top navbar-light bg-light navbar navbar-expand-lg navbar navbar-dark bg-dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="/">Collectibles Market</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -10,11 +10,14 @@
           <a class="nav-link active" aria-current="page" href="/">Home</a>
         </li>
         <li class="nav-item">
+          <%= link_to "Sell item", new_product_path, class: "btn btn-outline-info" %>
+        </li>
+    </div>
+        <li class="d-grid gap-2 d-md-flex justify-content-md-end">
           <% if user_signed_in? %>
-          <%= button_to "Log out", destroy_user_session_path, method: :get, class: "nav-link active" %>
+          <%= button_to "Log out", destroy_user_session_path, method: :get, class: "btn btn-primary me-md-2" %>
           <% end %>
         </li>
       </ul>
     </div>
-  </div>
 </nav>
