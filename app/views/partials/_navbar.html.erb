@@ -10,7 +10,9 @@
           <a class="nav-link active" aria-current="page" href="/">Home</a>
         </li>
         <li class="nav-item">
+          <% if user_signed_in? %>
           <%= link_to "Sell item", new_product_path, class: "btn btn-outline-info" %>
+          <% end %>
         </li>
     </div>
         <li class="d-grid gap-2 d-md-flex justify-content-md-end">
