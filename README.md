@@ -2,7 +2,7 @@
 
 R7. Identification of the problem you are trying to solve by building this particular marketplace app.
 
-My marketplace application is a collectibles marketplace where users can either buy or sell new or userd collectible product. 
+My marketplace application is a collectibles marketplace where users can either buy or sell new or used collectible product. 
 
 R8. Why is it a problem that needs solving?
 
