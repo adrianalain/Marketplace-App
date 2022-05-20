@@ -1,7 +1,7 @@
 <div id="<%= dom_id product %>">
 
   <p>
-    <%= image_tag product.image, width: 150 %>
+    <%= image_tag product.image, :transformation=>["media_lib_thumb"], :width=>200, :crop=>"scale", cloud_name: 'nakoawolf' %>
   </p>
   
   <p>

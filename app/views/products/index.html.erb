@@ -3,18 +3,21 @@
 <h1 class="text-center">Products</h1>
 <div class="row">
   <% @products.each do |product| %>
-    <div class="col-md-4">
-      <div class="card" style="width: 20rem;">
-        <%= image_tag product.image, class: "card-img-top" %>
-        <div class="card-body">
+    <div class="col-md-4"">
+      <div class="card" style="width: 18rem;">
+      <%= image_tag product.image, :transformation=>["media_lib_thumb"], :crop=>"fill", cloud_name: 'nakoawolf' %>
+      <div class="card-body">
           <h5 class="card-title"><%= product.name %></h5>
           <p class="card-text"><%= product.description %></p>
           <p class="card-text">$<%= product.price %></p>
       <div class= "d-grid gap-2 d-md-flex justify-content-md" >
+      <% if product.user.id == current_user.id %>
           <%= button_to "Show this product", product, method: :get, class: "btn btn-primary" %>
-          <%= button_to "Buy", product, class: "btn btn-outline-success" %>
-        </div>
-      </div> 
+      <% else %>
+      <%= button_to "Buy", product, class: "btn btn-outline-success" %>
+      <% end %>
+      </div>
+      </div>
       </div>
     </div>
   <% end %>
